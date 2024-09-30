@@ -1,0 +1,42 @@
+# Ignore Node.js dependencies
+**/node_modules/
+**/dist/
+
+# Ignore build output
+**/build/
+
+# Ignore environment variable files
+**/.env
+**/.env.*
+
+# Ignore Composer dependencies for Laravel
+graphql-app/vendor/
+
+# Ignore compiled PHP files
+graphql-app/bootstrap/cache/
+
+# Ignore IDE and OS specific files
+**/.idea/
+**/.vscode/
+**/*.DS_Store
+**/*.log
+**/.cache
+
+# Ignore Laravel log and cache files
+graphql-app/storage/logs/
+graphql-app/storage/framework/cache/
+graphql-app/storage/framework/sessions/
+graphql-app/storage/framework/views/
+graphql-app/public/storage/
+graphql-app/public/hot
+
+# Ignore local development files
+**/npm-debug.log*
+**/yarn-debug.log*
+**/yarn-error.log*
+
+# Ignore coverage reports
+**/coverage/
+
+# Ignore build artifacts
+**/build/
