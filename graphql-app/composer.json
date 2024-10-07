@@ -10,6 +10,7 @@
         "laravel/framework": "^10.10",
         "laravel/sanctum": "^3.3",
         "laravel/tinker": "^2.8",
+        "rebing/graphql-laravel": "^9.6",
         "webonyx/graphql-php": "^15.14"
     },
     "require-dev": {
@@ -34,6 +35,15 @@
         }
     },
     "scripts": {
+        "setup": [
+            "composer install",
+            "php artisan key:generate",
+            "php artisan migrate",
+            "php artisan db:seed"
+        ],
+        "re-seed": [
+            "php artisan migrate:fresh --seed"
+        ],
         "post-autoload-dump": [
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
             "@php artisan package:discover --ansi"
