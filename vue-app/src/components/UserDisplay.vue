@@ -1,14 +1,15 @@
 <template>
   <h2>Users</h2>
   <div v-if="loading">Loading...</div>
-  <table v-if="!loading">
+  <div v-if="error" class="err-msg">{{ error.message }}</div>
+  <table v-if="!loading && !error">
     <tr v-for="user in users" :key="user.id">
       <td>{{ user.name }}</td><td>{{ user.email }}</td>
     </tr>
   </table>
 </template>
 
-<script lang="ts">
+<script>
   import { defineComponent, computed } from 'vue'
   import { gql } from '@apollo/client/core'
   import { useQuery } from '@vue/apollo-composable'
@@ -37,3 +38,9 @@
     },
   })
 </script>
+
+<style scoped>
+  .err-msg {
+    color: crimson;
+  }
+</style>

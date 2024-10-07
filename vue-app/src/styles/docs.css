@@ -1,0 +1,15 @@
+.doc-content {
+  text-align: left;
+}
+
+.code-display {
+  background-color: black;
+  border-radius: 10px;
+  margin: 0 20px;
+
+  /* background-color: #f4f4f4; */
+  /* padding: 1em; */
+  /* border-radius: 5px; */
+  /* white-space: pre-wrap; This preserves indenting and line breaks */
+  /* overflow-x: auto; Allows scrolling for long lines of code */
+}
